@@ -12,10 +12,8 @@ _Comparison of codebook vectors of autoencoders (DALLE's dVAE vs VQGAN) that map
 <br/>
 <br/>
  <img src="dalle_cb.png" width="600">
-
  <br/>
- <br/>
- _Visualization of DALL-E codebook_
+ Visualization of DALL-E codebook
 <br/>
 <br/>
  <br/>
@@ -23,6 +21,5 @@ _Comparison of codebook vectors of autoencoders (DALLE's dVAE vs VQGAN) that map
  <br/>
  <br/>
  <img src="dalle_cb.png" width="600">
-  <br/>
  <br/>
- _Visualization of VQGAN codebook_
+ Visualization of VQGAN codebook
