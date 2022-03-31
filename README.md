@@ -6,6 +6,7 @@ _Comparison of codebook vectors of autoencoders (DALLE's dVAE vs VQGAN) that map
 <br/>
  <img src="article_title.png" width="600">
 <br/>
+Image above includes image of a bird from [DIV2k dataset](https://data.vision.ee.ethz.ch/cvl/DIV2K/). Image used with permission by authors for the article above. 
 <br/>
 <br/>
 <br/>
