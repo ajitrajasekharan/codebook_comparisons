@@ -30,4 +30,4 @@ _Comparison of codebook vectors of autoencoders (DALLE's dVAE vs VQGAN) that map
  
  # Additional Links
  
- [8192 VQGAN codebook visualized](https://drive.google.com/file/d/1mACU-vIfvRchICyoev_yap5OaowLCGgp/view?usp=sharing)
+ [8192 VQGAN codebook vectors visualizations](https://drive.google.com/file/d/1mACU-vIfvRchICyoev_yap5OaowLCGgp/view?usp=sharing)
