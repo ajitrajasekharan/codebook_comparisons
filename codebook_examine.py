@@ -39,8 +39,8 @@ def load_model(params):
     # also disable grad to save memory
     torch.set_grad_enabled(False)
 
-    #DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    DEVICE = torch.device("cpu")
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    #DEVICE = torch.device("cpu")
 
 
 
@@ -147,7 +147,8 @@ def output_image_codes(params):
     output_file = ''.join(output_file.split(".")[:-1]) +  ".txt"
     model = load_model(params)
     x_vqgan = preprocess(PIL.Image.open(input_file).convert("RGB"), target_image_size=params.size, map_dalle=False)
-    device = torch.device("cpu")
+   # device = torch.device("cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     x_vqgan = x_vqgan.to(device)
     x = preprocess_vqgan(x_vqgan)
     z, _, [_, _, indices] = model.encode(x)
@@ -161,7 +162,8 @@ def batched_output_image_codes(params):
     input_dir = params.input
     output_dir = params.output
     model = load_model(params)
-    device = torch.device("cpu")
+    #device = torch.device("cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     count = 1
     for file_names in os.listdir(input_dir):
         input_file = os.path.join(input_dir, file_names)
