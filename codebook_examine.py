@@ -109,7 +109,10 @@ def gen_image_using_image_codebook_values(input_file,recons_output_file,model):
         for line in fp:
             line = int(line.rstrip("\n"))
             arr.append(line)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    pdb.set_trace()
     arr = torch.LongTensor(arr)
+    arr = arr.to(device)
     z = model.quantize.get_codebook_entry(arr,None)
     z = z.permute(1,0).contiguous().view(1,3,96,96)
     xrec = model.decode(z)
@@ -129,7 +132,9 @@ def gen_image_using_image_custom_codes(params):
         for line in fp:
             line = int(line.rstrip("\n")) - index_correct 
             arr.append(line)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     arr = torch.LongTensor(arr)
+    arr = arr.to(device)
     z = model.quantize.get_codebook_entry(arr,None)
     z = z.permute(1,0).contiguous().view(1,3,96,96)
     xrec = model.decode(z)
@@ -146,6 +151,7 @@ def output_image_codes(params):
     output_file =  "indices_" + input_file.split("/")[-1]
     output_file = ''.join(output_file.split(".")[:-1]) +  ".txt"
     model = load_model(params)
+    pdb.set_trace()
     x_vqgan = preprocess(PIL.Image.open(input_file).convert("RGB"), target_image_size=params.size, map_dalle=False)
    # device = torch.device("cpu")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
