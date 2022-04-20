@@ -1,4 +1,4 @@
-# codebook_comparisons
+# codebook comparisons
 _Comparison of codebook vectors of autoencoders (DALLE's dVAE vs VQGAN) that map any image to a fixed vocabulary of vectors_
 <br/>
 <br/>
